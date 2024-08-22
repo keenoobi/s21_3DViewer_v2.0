@@ -57,7 +57,7 @@ Any human activity, such as cooking or nuclear physics experiments, has a set of
 In other words, to a programmer, a design pattern is nothing more than a building block, an elementary unit that is implemented when a typical subtask occurs within a project.
 
 Design patterns are usually divided into three groups: creative, structural and behavioural. See Resources for more information about design patterns. \
-You have already encountered the use of established practices (patterns) in application design in the SmartCalc v2.0 project (MVC pattern). As a reminder, MVC in one form or another is one of the most common solutions in terms of code structuring during UI application development.
+Pattern MVC in one form or another is one of the most common solutions in terms of code structuring during UI application development.
 The user interface and the business logic with its controller are usually separated into two different global domains: the interface domain and the business logic domain.
 
 The interface domain is only responsible for displaying the interface and passing commands to the business logic domain. Data loaded from a file should not be stored in the interface domain.
