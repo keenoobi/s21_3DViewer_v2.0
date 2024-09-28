@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('Varela-Regular.ttf') format('ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            max-width: 725px;
+            font-family: 'Varela', sans-serif;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            border-collapse: collapse;
+            align-items: center;
+            width: 100%;
+        }
+
+        td {
+            border: 1px solid #ddd;
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+        }
+
+        video {
+            margin: 0 auto;
+            display: block;
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+            color: #444;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #007BFF;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #777;
+        }
+    </style>
+    <title>3DViewer Documentation</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>3DViewer Documentation</h1>
+
+        <div class="section">
+            <h2>Part 1. 3DViewer v2.0</h2>
+            <p>Программа для визуализации каркасной модели в трехмерном пространстве:</p>
+            <ul>
+                <li>Программа разработана на языке C++ стандарта C++17;</li>
+                <li>Код программы находится в папке src;</li>
+                <li>При написании кода придерживались Google Style;</li>
+                <li>Сборка программы настроена с помощью Makefile со стандартным набором целей для GNU-программ: all,
+                    install, uninstall, clean, dvi, dist, tests. Установка ведется в любой другой произвольный каталог;
+                </li>
+                <li>Программа разработана в соответствии с принципами объектно-ориентированного программирования;</li>
+                <li>Обеспечено полное покрытие unit-тестами модулей, связанных с загрузкой моделей и аффинными
+                    преобразованиями;</li>
+                <li>В один момент времени только одна модель на экране;</li>
+                <li>Программа предоставляет возможность:
+                    <ul>
+                        <li>Загружать каркасную модель из файла формата obj (поддержка только списка вершин и
+                            поверхностей);</li>
+                        <li>Перемещать модель на заданное расстояние относительно осей X, Y, Z;</li>
+                        <li>Поворачивать модель на заданный угол относительно своих осей X, Y, Z;</li>
+                        <li>Масштабировать модель на заданное значение;</li>
+                    </ul>
+                </li>
+                <li>В программе реализован графический пользовательский интерфейс, на базе GUI-библиотеки с API для C++:
+                    <ul>
+                        <li>Для Linux: Qt;</li>
+                        <li>Для Mac: Qt;</li>
+                    </ul>
+                </li>
+                <li>Графический пользовательский интерфейс содержит:
+                    <ul>
+                        <li>Кнопку для выбора файла с моделью и поле для вывода его названия;</li>
+                        <li>Зону визуализации каркасной модели;</li>
+                        <li>Кнопку/кнопки и поля ввода для перемещения модели;</li>
+                        <li>Кнопку/кнопки и поля ввода для поворота модели;</li>
+                        <li>Кнопку/кнопки и поля ввода для масштабирования модели;</li>
+                        <li>Информацию о загруженной модели - название файла, кол-во вершин и ребер;</li>
+                    </ul>
+                </li>
+                <li>Программа корректно обрабатывает и позволяет пользователю просматривать модели с деталями до 100,
+                    1000, 10 000, 100 000, 1 000 000 вершин без зависания;</li>
+                <li>Программа реализована с использованием паттерна MVC, то есть:
+                    <ul>
+                        <li>Не должно быть кода бизнес-логики в коде представлений;</li>
+                        <li>Не должно быть кода интерфейса в контроллере и в модели;</li>
+                        <li>Контроллеры должны быть тонкими;</li>
+                    </ul>
+                </li>
+                <li>Использованы три паттерна проектирования (синглтон, фабрика и команда);</li>
+                <li>Классы реализованы внутри пространства имен s21;</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Part 2. Дополнительно. Настройки</h2>
+            <ul>
+                <li>Программа позволяет настраивать тип проекции (параллельная и центральная);</li>
+                <li>Программа позволяет настраивать тип (сплошная, пунктирная), цвет и толщину ребер, способ отображения
+                    (отсутствует, круг, квадрат), цвет и размер вершин;</li>
+                <li>Программа позволяет выбирать цвет фона;</li>
+                <li>Настройки сохраняются между перезапусками программы.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Part 3. Дополнительно. Запись</h2>
+            <ul>
+                <li>Программа позволяет сохранять полученные («отрендеренные») изображения в файл в форматах bmp и jpeg;
+                </li>
+                <li>Программа позволяет по специальной кнопке записывать небольшие «скринкасты» - текущие
+                    пользовательские аффинные преобразования загруженного объекта в gif-анимацию (640x480, 10fps, 5s).
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Демонстрация работы программы</h2>
+            <table>
+                <tr>
+                    <td>
+                        <img src="./dvi.webp" alt="video presentation">
+                        <!-- <video controls>
+                            <source src="./dvi.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>демонстрация работы программы</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="footer">
+            <p>3DViewer_v1.0 ( @kalynkei )</p>
+        </div>
+    </div>
+</body>
+
+</html>
