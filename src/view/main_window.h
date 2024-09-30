@@ -1,5 +1,5 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef CPP4_3DVIEWER_V_2_0_1_SRC_VIEW_MAIN_WINDOW_H_
+#define CPP4_3DVIEWER_V_2_0_1_SRC_VIEW_MAIN_WINDOW_H_
 
 #include <qgifimage.h>
 
@@ -119,4 +119,4 @@ class MainWindow : public QMainWindow {
 
 }  // namespace s21
 
-#endif  // MAINWINDOW_H
+#endif  // CPP4_3DVIEWER_V_2_0_1_SRC_VIEW_MAIN_WINDOW_H_

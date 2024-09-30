@@ -1,5 +1,5 @@
-#ifndef WIDGET_H
-#define WIDGET_H
+#ifndef CPP4_3DVIEWER_V_2_0_1_SRC_VIEW_WIDGET_H_
+#define CPP4_3DVIEWER_V_2_0_1_SRC_VIEW_WIDGET_H_
 
 #include <QFileDialog>
 #include <QMatrix4x4>
@@ -141,4 +141,4 @@ class GlView : public QOpenGLWidget, protected QOpenGLFunctions {
 
 }  // namespace s21
 
-#endif  // WIDGET_H
+#endif  // CPP4_3DVIEWER_V_2_0_1_SRC_VIEW_WIDGET_H_

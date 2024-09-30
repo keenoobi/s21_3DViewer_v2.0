@@ -1,5 +1,5 @@
-#ifndef OBJPARSER_H
-#define OBJPARSER_H
+#ifndef CPP4_3DVIEWER_V_2_0_1_SRC_BACKEND_OBJ_PARSER_H_
+#define CPP4_3DVIEWER_V_2_0_1_SRC_BACKEND_OBJ_PARSER_H_
 
 #include <fstream>
 #include <sstream>
@@ -31,4 +31,4 @@ class ObjParser {
 
 }  // namespace s21
 
-#endif  // OBJPARSER_H
+#endif  // CPP4_3DVIEWER_V_2_0_1_SRC_BACKEND_OBJ_PARSER_H_

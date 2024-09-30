@@ -1,5 +1,5 @@
-#ifndef MODEL_H
-#define MODEL_H
+#ifndef CPP4_3DVIEWER_V_2_0_1_SRC_BACKEND_MODEL_H_
+#define CPP4_3DVIEWER_V_2_0_1_SRC_BACKEND_MODEL_H_
 
 #include <string>
 #include <vector>
@@ -29,4 +29,4 @@ class ViewerModel {
 
 }  // namespace s21
 
-#endif  // MODEL_H
+#endif  // CPP4_3DVIEWER_V_2_0_1_SRC_BACKEND_MODEL_H_

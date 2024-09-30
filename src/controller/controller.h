@@ -1,5 +1,5 @@
-#ifndef CONTROLLER_H
-#define CONTROLLER_H
+#ifndef CPP4_3DVIEWER_V_2_0_1_SRC_CONTROLLER_CONTROLLER_H_
+#define CPP4_3DVIEWER_V_2_0_1_SRC_CONTROLLER_CONTROLLER_H_
 
 #include "../backend/model.h"
 
@@ -37,4 +37,4 @@ class Controller {
 
 }  // namespace s21
 
-#endif  // CONTROLLER_H
+#endif  // CPP4_3DVIEWER_V_2_0_1_SRC_CONTROLLER_CONTROLLER_H_

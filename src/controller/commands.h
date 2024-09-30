@@ -1,5 +1,5 @@
-#ifndef COMMAND_H
-#define COMMAND_H
+#ifndef CPP4_3DVIEWER_V_2_0_1_SRC_CONTROLLER_COMMANDS_H_
+#define CPP4_3DVIEWER_V_2_0_1_SRC_CONTROLLER_COMMANDS_H_
 
 #include "controller.h"
 
@@ -47,4 +47,4 @@ class ScaleCommand : public Command {
 
 }  // namespace s21
 
-#endif  // COMMAND_H
+#endif  // CPP4_3DVIEWER_V_2_0_1_SRC_CONTROLLER_COMMANDS_H_

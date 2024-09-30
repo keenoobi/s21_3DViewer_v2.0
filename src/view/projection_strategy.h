@@ -1,5 +1,5 @@
-#ifndef PROJECTION_STRATEGY_H
-#define PROJECTION_STRATEGY_H
+#ifndef CPP4_3DVIEWER_V_2_0_1_SRC_VIEW_PROJECTION_STRATEGY_H_
+#define CPP4_3DVIEWER_V_2_0_1_SRC_VIEW_PROJECTION_STRATEGY_H_
 
 namespace s21 {
 
@@ -26,4 +26,4 @@ class OrthographicProjection : public ProjectionStrategy {
 };
 }  // namespace s21
 
-#endif  // PROJECTION_STRATEGY_H
+#endif  // CPP4_3DVIEWER_V_2_0_1_SRC_VIEW_PROJECTION_STRATEGY_H_
