@@ -194,7 +194,6 @@ void GlView::cleanupGL() {
 
 void GlView::ReinitializeOpenGL(QString& fp) {
   file_path_ = fp;
-  // controller.LoadFromFile(file_path_.toStdString());
   makeCurrent();
   cleanupGL();
   initializeGL();
@@ -227,42 +226,6 @@ GLuint GlView::CreateShaderProgram(const char* vertexSource,
 
   return shaderProgram;
 }
-
-// void GlView::MoveVertices(int delta, eCoord coord) {
-//     switch (coord) {
-//     case eCoord::X:
-//         controller.Move(delta, 'x');
-//         break;
-//     case eCoord::Y:
-//         controller.Move(delta, 'y');
-//         break;
-//     case eCoord::Z:
-//         controller.Move(delta, 'z');
-//         break;
-//     }
-//     UpdateVertices();
-// }
-
-// void GlView::RotateVertices(int delta, eCoord coord) {
-//     switch (coord) {
-//     case eCoord::X:
-//         controller.Rotate(delta, 'x');
-//         break;
-//     case eCoord::Y:
-//         controller.Rotate(delta, 'y');
-//         break;
-//     case eCoord::Z:
-//         controller.Rotate(delta, 'z');
-//         break;
-//     }
-//     UpdateVertices();
-// }
-
-// void GlView::ScaleVertices(int delta) {
-//     // if (!delta) return;
-//     controller.Scale(delta);
-//     UpdateVertices();
-// }
 
 GlView::~GlView() {
   makeCurrent();

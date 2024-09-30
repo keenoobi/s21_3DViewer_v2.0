@@ -378,7 +378,6 @@ void MainWindow::SaveSettings() {
                     static_cast<int>(my_gl->GetProjectionType()));
 
   // Сохранение состояния модели и настроек
-  // settings.setValue("modelFileName", file_name);
   settings.setValue("prev_x_rot", prev_x_rot);
   settings.setValue("prev_y_rot", prev_y_rot);
   settings.setValue("prev_z_rot", prev_z_rot);
@@ -427,19 +426,6 @@ void MainWindow::LoadSettings() {
   slmove_x->setValue(prev_x_move);
   slmove_y->setValue(prev_y_move);
   slmove_z->setValue(prev_z_move);
-
-  // Загрузка состояния модели и настроек
-  // file_name = settings.value("modelFileName").toString();
-  // if (!file_name.isEmpty()) {
-  //     if (controller.LoadFromFile(file_name.toStdString())) {
-  //         my_gl->ReinitializeOpenGL(file_name);
-  //         info_label->setText(my_gl->GetInfoText());
-  //         main_layout->insertWidget(2, info_label);
-  //     } else {
-  //         QMessageBox::critical(this, "Error", "Failed to load file: " +
-  //         file_name);
-  //     }
-  // }
 }
 
 void MainWindow::SaveRenderedImage() {
@@ -559,11 +545,9 @@ void MainWindow::ResetToDefaults() {
   slmove_y->setValue(50);
   slmove_z->setValue(50);
 
-  // Сброс масштаба
-  // controller.ResetScale();
   controller.LoadFromFile(file_name.toStdString());
   my_gl->ReinitializeOpenGL(file_name);
-  // my_gl->ScaleVertices(current_scale);
+
   my_gl->update();
 }
 

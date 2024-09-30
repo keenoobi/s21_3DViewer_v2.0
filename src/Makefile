@@ -1,8 +1,5 @@
-CC=gcc
 CPP=g++
-CFLAGS=-Wall -Wextra -Werror -std=c11
 CPPFLAGS=-Wall -Wextra -Werror -std=c++17
-CURSES=-lncurses
 DIR?=../build
 TESTS_DIR=tests
 DIST_DIR=archive
@@ -13,7 +10,7 @@ TEST_SOURCES=$(filter-out ./view/% %.h, $(MAIN_PROJECT))
 TEST_OBJECTS=$(TEST_SOURCES:.cc=.o)
 TEST=$(TESTS_DIR)/test
 
-.PHONY: all clean install uninstall test gcov_report clang dvi dist run git
+.PHONY: all clean install uninstall tests gcov_report clang dvi dist run git
 
 OS := $(shell uname)
 ifeq ($(OS),Linux)
